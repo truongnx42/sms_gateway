@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Helper</name>
+    </assembly>
+    <members>
+        <member name="T:Helper.database">
+            <summary>
+            lớp tương tác vs csdl
+            </summary>
+        </member>
+        <member name="M:Helper.database.getData(System.String)">
+            <summary>
+            Thực hiện select dữ liệu từ database 
+            <param name="sql">Câu lệnh sql</param>
+            <returns>Datatable</returns>
+            </summary>
+        </member>
+        <member name="M:Helper.database.ExecuteQuery(System.String)">
+            <summary>
+            Thực hiện IUD dữ liệu từ database 
+            <param name="sql">Câu lệnh sql</param>
+            <returns>int</returns>
+            </summary>
+        </member>
+        <member name="P:Helper.database.SqlConnection">
+            <summary>
+            kết nối với sql
+            </summary>
+        </member>
+        <member name="T:Helper.DbConnection">
+            <summary>
+            Lớp kết nối
+            </summary>
+        </member>
+        <member name="M:Helper.DbConnection.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Khởi tạo giá trị mặc định
+            <param name="server">Tên máy chủ</param>
+            <param name="database">Tên database</param>
+            <param name="username">Tài khoản đăng nhập máy chủ</param>
+            <param name="password">Mật khẩu đăng nhập máy chủ</param>
+            </summary>
+            <returns value="Return">Trả về chuỗi kết nối </returns>
+        </member>
+        <member name="M:Helper.DbConnection.#ctor(System.String,System.String)">
+            <summary>
+            Khởi tạo giá trị mặc định với quyền cao nhât
+            <param name="server">Tên máy chủ</param>
+            <param name="database">Tên database</param>
+            </summary>
+            <returns value="Return">Trả về chuỗi kết nối </returns>
+        </member>
+        <member name="M:Helper.DbConnection.getConnection">
+            <summary>
+            Khởi tạo chuỗi kết nối tới cơ sở dữ liệu
+            </summary>
+            <returns value="Return">Trả về chuỗi kết nối </returns>
+        </member>
+        <member name="T:Helper.DbContext">
+            <summary>
+            tạo lệnh thực thi vs csdl
+            </summary>
+        </member>
+        <member name="M:Helper.DbContext.Select``1(``0)">
+            <summary>
+            Khởi tạo lệnh select
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:Helper.DbContext.Select``1(``0,System.String[])">
+            <summary>
+            Khởi tạo lệnh select
+            </summary>
+            <typeparam name="T">đối tượng cần select</typeparam>
+            <param name="column">cột cần lấy</param>
+            <param name="obj">cột cần lấy</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Helper.DbContext.Join``1(System.String,System.String,System.String)">
+            <summary>
+            Inner join các bảng
+            </summary>
+            <param name="col_1"></param>
+            <param name="col_2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Helper.DbContext.Where(System.String,System.String,System.String)">
+            <summary>
+            Điều kiện câu lệnh
+            mệnh đề mặc định là  '='
+            </summary>
+            <param name="column">cột</param>
+            <param name="param">giá trị</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Helper.DbContext.Where(System.String,System.String,System.String,System.String)">
+            <summary>
+            Điều kiện câu lệnh
+            </summary>
+            <param name="column">cột</param>
+            <param name="where">Điều kiên</param>
+            <param name="param">giá trị</param>
+            <returns>string</returns>>
+        </member>
+        <member name="M:Helper.DbContext.OrWhere(System.String,System.String,System.String)">
+            <summary>
+            Điều kiện câu lệnh
+            mệnh đề mặc định là  '='
+            </summary>
+            <param name="column">cột</param>
+            <param name="param">giá trị</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:Helper.DbContext.OrWhere(System.String,System.String,System.String,System.String)">
+            <summary>
+            Điều kiện câu lệnh
+            </summary>
+            <param name="column">cột</param>
+            <param name="where">Điều kiên</param>
+            <param name="param">giá trị</param>
+            <returns>string</returns>>
+        </member>
+        <member name="P:Helper.DbContext.page">
+            <summary>
+            total page
+            </summary>
+        </member>
+    </members>
+</doc>
